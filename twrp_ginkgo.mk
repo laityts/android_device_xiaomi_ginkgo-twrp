@@ -22,16 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
-
-PRODUCT_PACKAGES += \
-    qcom_decrypt \
-    qcom_decrypt_fbe
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ginkgo
-PRODUCT_NAME := omni_ginkgo
+PRODUCT_NAME := twrp_ginkgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi Redmi Note 8
 PRODUCT_MANUFACTURER := Xiaomi
